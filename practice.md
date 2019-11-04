@@ -26,10 +26,7 @@
 
 ## 2.文档快速链接
 
+1) [AI在线服务 UAI-Service](/ai/uai-inference/intro)
 
-1) [[ai:uai-service:intro|AI在线服务 UAI-Service]]
-
-2) [[ai:uai-train:intro|AI训练 UAI-Train]]
-
-3) [[ai:gpu:introduction|GPU云主机 GPU UHost]]
+2) [AI训练 UAI-Train](/ai/uai-train/index)
 

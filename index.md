@@ -2,8 +2,7 @@
 
 
 
-
-**目录** 
+**目录：** 
 
 {{indexmenu>:ai:gpu#1 | nsort dsort msort}}
 

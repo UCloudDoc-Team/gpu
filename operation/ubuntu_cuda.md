@@ -30,7 +30,7 @@ NVidia官方源地址 http://developer.download.nvidia.com/compute/cuda/repos/ub
   $ sudo nvidia-smi
 看到如下输出表示GPU驱动正常：
 
-{{ai:gpu:operation:nvidia.jpg|}}
+[](ai/gpu/operation/nvidia.jpg)
 
 ## 4. 测试GPU基本功能（可选）
 
