@@ -35,7 +35,7 @@ $ sudo nvidia-smi
 ```
 看到如下输出表示GPU驱动正常：
 
-[](ai/gpu/operation/nvidia.jpg)
+![](ai/gpu/operation/nvidia.jpg)
 
 ## 4. 测试GPU基本功能（可选）
 
@@ -43,9 +43,11 @@ $ sudo nvidia-smi
 <code>
 $ export LD_LIBRARY_PATH="/usr/local/cuda-7.5/lib64:/usr/lib64/:$LD_LIBRARY_PATH"
 </code>
+
 ### 4.2 安装cuda examples
+
 ```
-$ cd /usr/local/cuda/bin
+  $ cd /usr/local/cuda/bin
   $ sh cuda-install-samples-8.0.sh ~/cuda-test/
   $ cd ~/cuda-test/NVIDIA_CUDA-8.0_Samples
   $ make
@@ -54,6 +56,7 @@ $ cd /usr/local/cuda/bin
 ```
 
 Note: 如果编译过程发现lnvcuvid的错误，可以执行：
+
 <code>
 $ find . -type f -execdir sed -i 's/UBUNTU_PKG_NAME = "nvidia-367"/UBUNTU_PKG_NAME = "nvidia-375"/g' '{}' \  
 </code>
@@ -65,7 +68,7 @@ $ find . -type f -execdir sed -i 's/UBUNTU_PKG_NAME = "nvidia-367"/UBUNTU_PKG_NA
 选装，注：不同AI框架对cudnn的版本支持不同
 
 ### 5.1 下载cudnn软件包
-https://developer.nvidia.com/cudnn，需要注册nvidia账号后才能下载。
+[](https://developer.nvidia.com/cudnn)，需要注册nvidia账号后才能下载。
 
 注意：CentOS 下载 cuDNN v5.1 Library for Linux
          
@@ -85,6 +88,6 @@ $ export LD_LIBRARY_PATH=:$LD_LIBRARY_PATH
 ### 1. nvidia-smi 发现 GPU使用率100%，为什么？
 
 这个问题是系统读取gpu状态信息不准确导致，执行下列命令可更正，让系统读取命令正确。
-```
+<code>
 \# nvidia-smi -pm 1
-```
+</code>
