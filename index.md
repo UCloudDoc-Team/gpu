@@ -4,5 +4,7 @@
 
 **目录：** 
 
-{{indexmenu>:ai:gpu#1 | nsort dsort msort}}
+[概览](ai/gpu/overview)
+
+
 

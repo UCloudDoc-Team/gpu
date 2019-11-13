@@ -2,5 +2,6 @@
 
 # 驱动安装指南
 
-{{indexmenu>:ai:gpu:operation#1 | nsort dsort msort}}
+- [CentOS7环境配置](ai/gpu/operation/centos7_cuda)
+- [Ubuntu14.04环境配置](ai/gpu/operation/ubuntu_cuda)
 
