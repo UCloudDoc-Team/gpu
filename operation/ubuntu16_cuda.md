@@ -34,6 +34,7 @@ sudo apt-get install build-essential pkg-config linux-headers-`uname -r`
 
 ### 3.1 下载
 到nvidia官网下载合适的驱动（目前版本418.126.02），地址https://www.nvidia.com/Download/index.aspx?lang=en-us
+
 也可从UFile下载，速度更快 http://gpu.cn-bj.ufileos.com/NVIDIA-Linux-x86_64-418.126.02.run
 
 ### 3.2 安装
