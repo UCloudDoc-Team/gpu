@@ -6,7 +6,7 @@
 ```
   $ sudo lspci | grep NVIDIA
   3D controller: NVIDIA Corporation GK210GL [Tesla K80] 表示识别为K80
-  3D controller: NVIDIA Corporation Device 1b38 (rev a1) 表示为P40
+  3D controller: NVIDIA Corporation GP102GL [Tesla P40] (rev a1) 表示为P40
 ```
 
 ## 2. 获取cuda网络源，并配置：
@@ -38,7 +38,7 @@ $ sudo nvidia-smi
 </code>
 看到如下输出表示GPU驱动正常：
 
-![](ai/gpu/operation/nvidia.jpg)
+![](ai/gpu/images/operation/nvidia.jpg)
 
 ## 4. 测试GPU基本功能（可选）
 
@@ -46,6 +46,7 @@ $ sudo nvidia-smi
 <code>
   $ export LD_LIBRARY_PATH="/usr/local/cuda-7.5/lib64:/usr/lib64/:$LD_LIBRARY_PATH"
 </code>
+
 ### 4.2 安装cuda examples
 ```
   $ cd /usr/local/cuda/bin
