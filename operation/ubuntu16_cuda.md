@@ -26,7 +26,7 @@ alias lbm-nouveau off
 更新并重启：
 ```
 sudo update-initramfs -u
-reboot
+sudo reboot
 sudo apt-get install build-essential pkg-config linux-headers-`uname -r`
 ```
 
@@ -75,6 +75,9 @@ sudo apt-get -y install cuda
 
 这个问题是系统读取gpu状态信息不准确导致，执行下列命令可更正，让系统读取命令正确。
 <code>
-    # nvidia-smi -pm 1
+    #sudo nvidia-smi -pm 1
 </code>
 
+### 2. 除自行安装外，是否有其它可获得驱动镜像的方法？
+
+可提交工单，或联系工作人员，获得UCloud制作的包含GPU驱动和Cuda环境的镜像，节省人工安装的时间。

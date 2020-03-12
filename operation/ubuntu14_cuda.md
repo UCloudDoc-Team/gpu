@@ -20,16 +20,19 @@ NVidia官方源地址 http://developer.download.nvidia.com/compute/cuda/repos/ub
 ```
 
 ## 3. 安装cuda 8.0
+在安装前请uname -a  检测当前内核版本，然后确保对应版本的kernel-header包已经安装，否则无法正常编译驱动。
 ```
-  $ sudo apt-get install cuda-8.0
-  注：在安装前请uname -a  检测当前内核版本，然后确保对应版本的kernel-header包已经安装，否则无法正常编译驱动。
   $ uname -a
   $ Linux X-X-X-X 3.13.0-123-generic #172-Ubuntu SMP Mon
-  $ sudo aptitude search 3.13.0-123-generic
+  $ sudo apt search 3.13.0-123-generic
   $ p   linux-cloud-tools-3.13.0-123-generic   - Linux kernel version specific cloud tools for version 3.13.0-123                      
   $ p   linux-headers-3.13.0-123-generic      - Linux kernel headers for version 3.13.0 on 64 bit x86 SMP                             
   $ p   linux-headers-3.13.0-123-generic:i386   - Linux kernel headers for version 3.13.0 on 32 bit x86 SMP
   $ sudo apt-get install  linux-headers-3.13.0-123-generic 
+```
+安装cuda
+```
+  $ sudo apt-get install cuda-8.0
 ```
 
 ### 3.1 查看驱动状态
@@ -55,8 +58,10 @@ $ sudo nvidia-smi
   $ make
   $ ./bin/x86_64/linux/release/deviceQuery 获取设备状态
   $ ./bin/x86_64/linux/release/bandwidthTest 测试设备带宽
-  Note: 如果编译过程发现lnvcuvid的错误，可以执行：
-  $ find . -type f -execdir sed -i 's/UBUNTU_PKG_NAME = "nvidia-367"/UBUNTU_PKG_NAME = "nvidia-375"/g' '{}' \    
+```
+如果编译过程发现lnvcuvid的错误，可以执行：
+```
+$ find . -type f -execdir sed -i 's/UBUNTU_PKG_NAME = "nvidia-367"/UBUNTU_PKG_NAME = "nvidia-375"/g' '{}' \    
 ```
 其中nvidia-375是当前安装的驱动的版本
 
@@ -91,3 +96,6 @@ $ sudo vim /etc/apt/apt.conf.d/10periodic
     # nvidia-smi -pm 1
 </code>
 
+### 2. 除自行安装外，是否有其它可获得驱动镜像的方法？
+
+可提交工单，或联系工作人员，获得UCloud制作的包含GPU驱动和Cuda环境的镜像，节省人工安装的时间。
