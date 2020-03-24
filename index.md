@@ -4,7 +4,7 @@
 
 **目录：** 
 
-[概览](ai/gpu/overview)
+[概览](/gpu/README)
 
 
 
