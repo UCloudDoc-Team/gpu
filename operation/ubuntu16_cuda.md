@@ -78,6 +78,6 @@ sudo apt-get -y install cuda
     #sudo nvidia-smi -pm 1
 </code>
 
-### 2. 除自行安装外，是否有其它获得驱动镜像的方法？
+### 2. 除自行安装外，是否有其它可获得驱动镜像的方法？
 
 可提交工单，或联系工作人员，获得UCloud制作的包含GPU驱动和Cuda环境的镜像，节省人工安装的时间。
