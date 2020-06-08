@@ -4,9 +4,9 @@
 
 ## 1.文档快速链接
 
-1) [AI在线服务 UAI-Service](/ai/uai-inference/overview)
+1) [AI在线服务 UAI-Service](uai-inference/README)
 
-2) [AI训练 UAI-Train](/ai/uai-train/index)
+2) [AI训练 UAI-Train](uai-train/README)
 
 ## 2. 机器学习进阶笔记系列
 
