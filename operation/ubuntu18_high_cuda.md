@@ -1,8 +1,11 @@
 
 
-# Ubuntu 16.04 环境配置
+# 高内核Ubuntu 18.04 环境配置
+
+高内核Ubuntu 18.04镜像的内核为UCloud优化的4.19.0-4.ucloud
 
 ## 1. 检查GPU设备识别
+
 ```
   $ sudo lspci | grep NVIDIA
   3D controller: NVIDIA Corporation GK210GL [Tesla K80] 表示识别为K80
@@ -27,8 +30,10 @@ alias lbm-nouveau off
 ```
 sudo update-initramfs -u
 sudo reboot
-sudo apt-get install build-essential pkg-config linux-headers-`uname -r`
+sudo apt-get install build-essential pkg-config
 ```
+此版本 linux-headers已默认安装。
+
 
 ## 3. 安装nvidia驱动
 
@@ -56,17 +61,23 @@ $ sudo nvidia-smi
 ### 4.1 网络安装
 
 ```
-sudo wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-ubuntu1604.pin
+sudo wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-ubuntu1804.pin
 
-sudo mv cuda-ubuntu1604.pin /etc/apt/preferences.d/cuda-repository-pin-600
+sudo mv cuda-ubuntu1804.pin /etc/apt/preferences.d/cuda-repository-pin-600
 
-sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/7fa2af80.pub
+sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
 
-sudo add-apt-repository "deb http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/ /"
+sudo add-apt-repository "deb http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/ /"
 
 sudo apt-get update
 
 sudo apt-get -y install cuda
+```
+
+### 4.2 本地安装
+```
+wget http://developer.download.nvidia.com/compute/cuda/10.2/Prod/local_installers/cuda_10.2.89_440.33.01_linux.run
+sudo sh cuda_10.2.89_440.33.01_linux.run
 ```
 
 ## FAQ
