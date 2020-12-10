@@ -1,4 +1,3 @@
-<div class="sidebar_title icon__uhost"> GPU云主机</div>
 
 * [概览](/gpu/README)
 * [产品简介](/gpu/introduction)
