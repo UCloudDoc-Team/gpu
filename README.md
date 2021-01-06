@@ -1,7 +1,7 @@
 # 概览
 
 
-* [产品简介](/gpu/introduction)
+* [产品简介.](/gpu/introduction)
 * [产品优势](/gpu/advantage)
 * [机型与性能](/gpu/type)
 * [深度学习指南](/gpu/practice)
