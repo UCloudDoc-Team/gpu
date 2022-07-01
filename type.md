@@ -2,7 +2,7 @@
 
 
 
-## G1型
+## K80
 
 GPU可选：1-2颗 Tesla K80。
 
@@ -14,7 +14,7 @@ CPU可选：4核/8核/16核
 
 已下线
 
-## G2型
+## P40
 
 GPU可选：1-4颗 Tesla P40。
 
@@ -26,7 +26,7 @@ CPU可选：4核-32核
 
 可选可用区：上海二可用区B，广州可用区B
 
-## G3型
+## V100
 
 GPU可选：1-4颗 Tesla V100
 
@@ -38,7 +38,7 @@ CPU可选：4核-32核
 
 可选可用区：上海二可用区C
 
-## G4型
+## T4
 
 GPU可选：1-4颗 Tesla T4
 
@@ -50,9 +50,7 @@ CPU可选：4核-32核
 
 可选可用区：华北一可用区E
 
-## G7型
-
-### 1.GPU可选：1-8颗 Tesla T4（T4S）
+## T4S
 
 CPU可选：4核-92核
 
@@ -62,7 +60,7 @@ CPU可选：4核-92核
 
 可选可用区：华北一可用区B，广州B，华北一E
 
-### 2.GPU可选：1-8颗 Tesla V100（V100S）
+## V100S
 
 CPU可选：4核-92核
 
@@ -74,12 +72,13 @@ CPU可选：4核-92核
 
 ## 性能参数
 
-| 参数 | Tesla V100 | Tesla P40 | Tesla K80 | Tesla T4/T4S | Tesla V100S |
-| ---- | ---------------- | --------------- | --------------- | --------------- | --------------- |
-| CUDA核心数 | 5120 | 3840 | 2496 | 2560 | 5120 |
-| 单精度浮点性能  | 14 TFOPS | 12 TFLOPS | 8.7 TFLOPS | 8.1 TFLOPS | 16.35 TFLOPS |
-| INT8性能 | N/A | 47 TOPS | N/A | 130 TOPS | N/A |
-| Tensor性能 | 112 TFLOPS | N/A | N/A | N/A | 130 TFLOPS | 
-| 显存容量 | 16GB | 24GB | 12GB | 16GB | 32GB |
-| 功耗 | 250W | 250W | 300W | 70W | 300W |
-| 架构 | Volta | Pascal | Kepler | Turing | Volta|
+| 参数 | Tesla K80  | Tesla P40 | Telsa V100 | Tesla T4/T4S | Tesla V100S  |
+| -------------- | ---------- | --------- | ---------- | ---------- | ------------ | ------------ |
+| CUDA核心数 | 2496 | 3840 | 5120 | 2560 | 5120 |
+| 单精度浮点性能 | 8.7 TFLOPS | 12 TFLOPS | 14 TFOPS | 8.1 TFLOPS | 16.35 TFLOPS |
+| INT8性能  | N/A | 47 TOPS  | N/A | 130 TOPS | N/A |
+| Tensor性能 | N/A | N/A  | 112 TFLOPS | N/A | 130 TFLOPS |
+| 显存容量 | 12GB | 24GB | 16GB | 16GB | 32GB |
+| 功耗 | 300W | 250W | 250W | 70W | 300W |
+| 架构 | Kepler | Pascal | Volta | Turing | Volta |
+
