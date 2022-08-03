@@ -14,7 +14,8 @@
 
 ## 常见报错
 
-1. windows安装驱动报错缺少wlanapi.dll
+1. windows安装驱动报错缺少wlanapi.dll 
+
 解决方式：打开【服务器管理器】窗口，选择【管理】菜单中的【添加角色和功能】选项，启动【添加角色和功能向导】，也可以直接点击【仪表板】中【快速启动】的【添加角色和功能】链接来启动。
 ![image](https://github.com/UCloudDoc-Team/gpu/blob/master/images/operation/wlanapi1.png)
 ![image](https://github.com/UCloudDoc-Team/gpu/blob/master/images/operation/wlanapi2.png)
