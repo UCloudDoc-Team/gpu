@@ -6,7 +6,7 @@
 
 2.访问[NVIDIA驱动下载](https://www.nvidia.com/Download/Find.aspx) 官网；
 
-3.根据实例操作系统及GPU规格，选择操作系统和安装包，本文以T4为例，如下图所示：
+3.根据GPU云主机操作系统及GPU规格，选择操作系统和安装包，本文以T4为例，如下图所示：
 ![image](/images/operation/driver.png)
 
 4.打开下载驱动程序所在的文件夹，双击安装文件开始安装，按照界面上的提示安装驱动程序并根据需要重启实例。
