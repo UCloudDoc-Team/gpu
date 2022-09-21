@@ -72,13 +72,13 @@ CPU可选：4核-92核
 
 ## 性能参数
 
-| 参数 | Tesla K80  | Tesla P40 | Telsa V100 | Tesla T4/T4S | Tesla V100S  |
+| 参数 | Tesla K80  | Tesla P40 | Telsa V100 | Tesla T4/T4S | Tesla V100S  | Tesla A100 |
 | -------------- | ---------- | --------- | ---------- | ---------- | ------------ | ------------ |
-| CUDA核心数 | 2496 | 3840 | 5120 | 2560 | 5120 |
-| 单精度浮点性能 | 8.7 TFLOPS | 12 TFLOPS | 14 TFOPS | 8.1 TFLOPS | 16.35 TFLOPS |
-| INT8性能  | N/A | 47 TOPS  | N/A | 130 TOPS | N/A |
-| Tensor性能 | N/A | N/A  | 112 TFLOPS | N/A | 130 TFLOPS |
-| 显存容量 | 12GB | 24GB | 16GB | 16GB | 32GB |
-| 功耗 | 300W | 250W | 250W | 70W | 300W |
-| 架构 | Kepler | Pascal | Volta | Turing | Volta |
+| CUDA核心数 | 2496 | 3840 | 5120 | 2560 | 5120 | 6912 |
+| 单精度浮点性能 | 8.7 TFLOPS | 12 TFLOPS | 14 TFOPS | 8.1 TFLOPS | 16.35 TFLOPS | 19.49 TFLOPS |
+| INT8性能  | N/A | 47 TOPS  | N/A | 130 TOPS | N/A | N/A |
+| Tensor性能 | N/A | N/A  | 112 TFLOPS | N/A | 130 TFLOPS | 312 TFLOPS |
+| 显存容量 | 12GB | 24GB | 16GB | 16GB | 32GB | 80GB |
+| 功耗 | 300W | 250W | 250W | 70W | 300W | 300W |
+| 架构 | Kepler | Pascal | Volta | Turing | Volta | Ampere |
 
