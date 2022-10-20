@@ -10,7 +10,7 @@
  ## 2.虚机内部启动jupyter
  
  ```
- #nohup jupyter notebook &
+ nohup jupyter notebook &
  ```
  目的在于后续可以在web页面浏览生成的图片，也可在web页面直接编写python交互式程序。
 
@@ -31,20 +31,22 @@ python scripts/txt2img.py --prompt "a painting of Mads Mikkelsen smoking"
 ```
 #### 3.1.3 使用jupyter页面查看
 根据外网ip地址，访问http://EIP:8888
-![image](/images/software/keep1.jpg)
+![image](https://github.com/UCloudDoc-Team/gpu/blob/master/practice/image/jupyter1.png)
 
 输入token（在/root/.jupyter/jupyter_notebook_config.py中查看c.NotebookApp.token的配置，可自行修改。）
-![image](/images/software/keep1.jpg)
+![image](https://github.com/UCloudDoc-Team/gpu/blob/master/practice/image/jupyter2.png)
+![image](https://github.com/UCloudDoc-Team/gpu/blob/master/practice/image/jupyter3.png)
 
 根据导航点击预览图片
-![image](/images/software/keep1.jpg)
+![image](https://github.com/UCloudDoc-Team/gpu/blob/master/practice/image/jupyter5.png)
 
 ### 3.2 方式二：使用stable diffusion的lib
 #### 3.2.1 切换到指定目录
-cd到指定目录
+
 cd /root/demo
 #### 3.2.2 执行python test.py
 !> 需确保在ldm的conda环境中运行
+以下以生成图片“astronaut_rides_horse.png”为例做演示。
 ```
 test.py
 from torch import autocast
@@ -59,10 +61,9 @@ with autocast("cuda"):
      
 image.save("astronaut_rides_horse.png")
 ```
-生成图片astronaut_rides_horse.png
 
 #### 3.2.3 使用jupyter页面查看
-
+![image](https://github.com/UCloudDoc-Team/gpu/blob/master/practice/image/jupyter4.png)
 
  
    
