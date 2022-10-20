@@ -44,7 +44,7 @@ python scripts/txt2img.py --prompt "a painting of Mads Mikkelsen smoking"
 cd到指定目录
 cd /root/demo
 #### 3.2.2 执行python test.py
-（需确保在ldm的conda环境中运行）
+!> 需确保在ldm的conda环境中运行
 ```
 test.py
 from torch import autocast
