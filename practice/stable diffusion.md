@@ -19,7 +19,7 @@
 ## 3. 使用stable diffusion
 ### 3.1 方式一：使用stable diffusion的sample script
 #### 3.1.1 切换conda环境
-切换conda环境
+
 ```
 conda activate ldm
 ```
