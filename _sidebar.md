@@ -10,4 +10,4 @@
     * [Ubuntu16.04环境配置](/gpu/operation/ubuntu16_cuda)
     * [Ubuntu18.04环境配置](/gpu/operation/ubuntu18_cuda)
     * [Windows 环境配置](/gpu/operation/Windows_cuda)  
-* [AI绘画stable diffusion实践](/gpu/practice/stable_diffusion)       
+     
