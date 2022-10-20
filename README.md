@@ -12,5 +12,5 @@
     * [Ubuntu18.04环境配置](/gpu/operation/ubuntu18_cuda)
     * [Windows 环境配置](/gpu/operation/Windows_cuda)
 * [最佳实践]
-    * [AI绘画stable diffusion实践](/gpu/practice/stable diffusion.md)
+    * [AI绘画stable diffusion 实践](/gpu/practice/stable diffusion)
 
