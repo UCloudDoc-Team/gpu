@@ -2,7 +2,7 @@
 
 ## 1.创建一台GPU云主机
 创建流程参考[创建第一台云主机](https://docs.ucloud.cn/uhost/newuser/briefguide)</br>
-创建GPU云主机时，镜像选择“AI绘画stable diffusion平台”，操作路径：镜像市场——>AI绘画stable diffusion平台,便捷安装stable diffusion,镜像内置环境：CentOS 7.8。</br> 
+创建GPU云主机时，镜像选择“AI绘画stable diffusion平台”，操作路径：镜像市场——>AI绘画stable diffusion平台，便捷安装stable diffusion，镜像内置环境：CentOS 7.8。</br> 
 推荐机型：GPU型云主机 T4/T4S。
 
 ?> 内存请选择32GB及以上，否则模型加载时可能会触发OOM。</br> 
@@ -25,7 +25,7 @@
 conda activate ldm
 ```
 #### 3.1.2 执行sample脚本
-执行脚本,输入您预想图画的描述，即可得到图片（以下以“a painting of Mads Mikkelsen smoking”为例），生成的图片在 /root/stable-diffusion/outputs/txt2img-samples/目录下。
+执行脚本，输入您预想图画的描述，即可得到图片（以下以“a painting of Mads Mikkelsen smoking”为例），生成的图片在 /root/stable-diffusion/outputs/txt2img-samples/目录下。
 ```
 cd stable-diffusion
 python scripts/txt2img.py --prompt "a painting of Mads Mikkelsen smoking"
