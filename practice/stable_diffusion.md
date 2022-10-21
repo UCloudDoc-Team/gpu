@@ -2,9 +2,9 @@
 
 ## 1.创建一台GPU云主机
 创建流程参考[创建第一台云主机](https://docs.ucloud.cn/uhost/newuser/briefguide)</br>
-?> 创建GPU云主机时，镜像选择“AI绘画stable diffusion平台”，操作路径：镜像市场——>AI绘画stable diffusion平台,便捷安装stable diffusion,镜像内置环境：CentOS 7.8；</br>
-   推荐机型：GPU型云主机 T4/T4S；</br>
-   内存请选择32GB及以上，否则模型加载时可能会触发OOM；</br>
+?> 1.创建GPU云主机时，镜像选择“AI绘画stable diffusion平台”，操作路径：镜像市场——>AI绘画stable diffusion平台,便捷安装stable diffusion,镜像内置环境：CentOS 7.8；</br>
+   2.推荐机型：GPU型云主机 T4/T4S；</br>
+   3内存请选择32GB及以上，否则模型加载时可能会触发OOM；</br>
    绑定EIP并在外网防火墙放行TCP 8888端口。
    
  ## 2.虚机内部启动jupyter
@@ -31,14 +31,14 @@ python scripts/txt2img.py --prompt "a painting of Mads Mikkelsen smoking"
 ```
 #### 3.1.3 使用jupyter页面查看
 根据外网ip地址，访问http://EIP:8888
-![image](/gpu/practice/image/jupyter1.png)
+![img](/practice/image/jupyter1.png)
 
 输入token（在/root/.jupyter/jupyter_notebook_config.py中查看c.NotebookApp.token的配置，可自行修改。）
-![image](/gpu/practice/image/jupyter2.png)
-![image](/gpu/practice/image/jupyter3.png)
+![img](/practice/image/jupyter2.png) </br>
+![img](/practice/image/jupyter3.png)
 
 根据导航点击预览图片
-![image](/gpu/practice/image/jupyter5.png)
+![img](/practice/image/jupyter5.png)
 
 ### 3.2 方式二：使用stable diffusion的lib
 #### 3.2.1 切换到指定目录
@@ -63,7 +63,7 @@ image.save("astronaut_rides_horse.png")
 ```
 
 #### 3.2.3 使用jupyter页面查看
-![image](/gpu/practice/image/jupyter4.png)
+![img](/practice/image/jupyter4.png)
 
  
    
