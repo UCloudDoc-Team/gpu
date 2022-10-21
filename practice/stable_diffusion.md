@@ -31,14 +31,14 @@ python scripts/txt2img.py --prompt "a painting of Mads Mikkelsen smoking"
 ```
 #### 3.1.3 使用jupyter页面查看
 根据外网ip地址，访问http://EIP:8888
-![image](https://github.com/UCloudDoc-Team/gpu/blob/master/practice/image/jupyter1.png)
+![image](/gpu/practice/image/jupyter1.png)
 
 输入token（在/root/.jupyter/jupyter_notebook_config.py中查看c.NotebookApp.token的配置，可自行修改。）
-![image](https://github.com/UCloudDoc-Team/gpu/blob/master/practice/image/jupyter2.png)
-![image](https://github.com/UCloudDoc-Team/gpu/blob/master/practice/image/jupyter3.png)
+![image](/gpu/practice/image/jupyter2.png)
+![image](/gpu/practice/image/jupyter3.png)
 
 根据导航点击预览图片
-![image](https://github.com/UCloudDoc-Team/gpu/blob/master/practice/image/jupyter5.png)
+![image](/gpu/practice/image/jupyter5.png)
 
 ### 3.2 方式二：使用stable diffusion的lib
 #### 3.2.1 切换到指定目录
@@ -63,7 +63,7 @@ image.save("astronaut_rides_horse.png")
 ```
 
 #### 3.2.3 使用jupyter页面查看
-![image](https://github.com/UCloudDoc-Team/gpu/blob/master/practice/image/jupyter4.png)
+![image](/gpu/practice/image/jupyter4.png)
 
  
    
