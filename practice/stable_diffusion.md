@@ -4,8 +4,8 @@
 创建流程参考[创建第一台云主机](https://docs.ucloud.cn/uhost/newuser/briefguide)</br>
 ?> 1.创建GPU云主机时，镜像选择“AI绘画stable diffusion平台”，操作路径：镜像市场——>AI绘画stable diffusion平台,便捷安装stable diffusion,镜像内置环境：CentOS 7.8；</br>
    2.推荐机型：GPU型云主机 T4/T4S；</br>
-   3内存请选择32GB及以上，否则模型加载时可能会触发OOM；</br>
-   绑定EIP并在外网防火墙放行TCP 8888端口。
+   3.内存请选择32GB及以上，否则模型加载时可能会触发OOM；</br>
+   4.绑定EIP并在外网防火墙放行TCP 8888端口。
    
  ## 2.虚机内部启动jupyter
  
@@ -42,8 +42,9 @@ python scripts/txt2img.py --prompt "a painting of Mads Mikkelsen smoking"
 
 ### 3.2 方式二：使用stable diffusion的lib
 #### 3.2.1 切换到指定目录
-
+```
 cd /root/demo
+```
 #### 3.2.2 执行python test.py
 !> 需确保在ldm的conda环境中运行
 以下以生成图片“astronaut_rides_horse.png”为例做演示。
