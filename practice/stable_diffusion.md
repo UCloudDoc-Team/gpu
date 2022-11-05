@@ -41,32 +41,38 @@ python scripts/txt2img.py --prompt "a painting of Mads Mikkelsen smoking"
 根据导航点击预览图片
 ![img](/images/practice/jupyter5.png)
 
-### 3.2 方式二：使用stable diffusion的lib
-#### 3.2.1 切换到指定目录
-```
-cd /root/demo
-```
-#### 3.2.2 执行python test.py
-!> 需确保在ldm的conda环境中运行。
+### 3.2 方式二：使用jupyter nodebook新建ldm环境（推荐）
+![img](/images/practice/ldm1.png)
 
-以下以生成图片“astronaut_rides_horse.png”为例做演示。
+
+添加如下示例代码后运行
 ```
-test.py
 from torch import autocast
 from diffusers import StableDiffusionPipeline
+from IPython.display import Image
+ 
+width = 512
+height = 512
  
 pipe = StableDiffusionPipeline.from_pretrained(
-    "./stable-diffusion-v1-4").to("cuda")
+    "/root/demo/stable-diffusion-v1-4").to("cuda")
  
-prompt = "a photo of an astronaut riding a horse on mars"
+prompt = "A thriving view alongside Pearl of the Orient in Shanghai , by Van Gogh, oil painting trending on artstation HQ"
 with autocast("cuda"):
-    image = pipe(prompt)["sample"][0] 
+    image = pipe(prompt, height, width)["sample"][0] 
      
-image.save("astronaut_rides_horse.png")
+image.save("Van_Gogh_Style_Shanghai.png")
+ 
+# show the image in web
+Image(filename = 'Van_Gogh_Style_Shanghai.png', width=width, height=height)
 ```
+?> 1. 选中代码分区，点击【运行】，如出现In[* ]，则表示代码运行中，静等出图结果即可；</br>
+   2. 如您需要调整画布尺寸，需保证调整后长宽的均为8的整数倍。
 
-#### 3.2.3 使用jupyter页面查看
-![img](/images/practice/jupyter4.png)
+生成图片即可立即查看
+![img](/images/practice/ldm2.png)
+
+?> 如您想快速尝试，还可直接使用demo/路径下的SD_Demos.ipynb，内置英文版、中文版模型。
 
  
    
