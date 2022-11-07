@@ -45,7 +45,7 @@ python scripts/txt2img.py --prompt "a painting of Mads Mikkelsen smoking"
 ![img](/images/practice/ldm1.png)
 
 
-添加如下示例代码后运行
+添加如下示例代码后运行（以"A thriving view alongside Pearl of the Orient in Shanghai , by Van Gogh, oil painting trending on artstation HQ"为示例）
 ```
 from torch import autocast
 from diffusers import StableDiffusionPipeline
