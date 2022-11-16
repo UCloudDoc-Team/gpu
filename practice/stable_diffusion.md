@@ -41,6 +41,7 @@ Image(filename = 'Van_Gogh_Style_Shanghai.png', width=width, height=height)
 
 
 如您使用**中文版**描述，可参考以下示例：
+
 添加如下示例代码后运行（以"大漠孤烟直，长河落日圆，油画"为示例）
 ```
 from diffusers import StableDiffusionPipeline
