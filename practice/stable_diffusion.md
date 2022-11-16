@@ -10,6 +10,12 @@
    
  ## 2.使用stable diffusion
  ### 2.1 方式一：使用jupyter nodebook新建ldm环境（推荐）
+ 根据外网ip地址，访问jupyter：http://EIP:8888
+ ![img](/images/practice/jupyter1.png) </br>
+ 输入token（在/root/.jupyter/jupyter_notebook_config.py中查看c.NotebookApp.token的配置，可自行修改。）
+ 
+ 新建ldm
+ 
 ![img](/images/practice/ldm1.png)
 
 如您使用**英文版**描述，可参考以下示例：
