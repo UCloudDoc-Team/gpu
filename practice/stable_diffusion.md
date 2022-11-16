@@ -8,11 +8,11 @@
 ?> 内存请选择32GB及以上，否则模型加载时可能会触发OOM。</br> 
 绑定EIP并在外网防火墙放行TCP 8888端口。
    
- ### 2.使用stable diffusion
+ ## 2.使用stable diffusion
  ### 2.1 方式一：使用jupyter nodebook新建ldm环境（推荐）
 ![img](/images/practice/ldm1.png)
 
-如您使用英文版描述，可参考以下示例：
+如您使用**英文版**描述，可参考以下示例：
 
 添加如下示例代码后运行（以"A thriving view alongside Pearl of the Orient in Shanghai , by Van Gogh, oil painting trending on artstation HQ"为示例）
 ```
@@ -35,12 +35,12 @@ image.save("Van_Gogh_Style_Shanghai.png")
 # show the image in web
 Image(filename = 'Van_Gogh_Style_Shanghai.png', width=width, height=height)
 ```
-生成图片即可立即查看
+生成图片即可立即查看。
 
 ![img](/images/practice/ldm2.png)
 
 
-如您使用中文版描述，可参考以下示例：
+如您使用**中文版**描述，可参考以下示例：
 添加如下示例代码后运行（以"大漠孤烟直，长河落日圆，油画"为示例）
 ```
 from diffusers import StableDiffusionPipeline
@@ -58,14 +58,14 @@ image.save("油画.png")
 # show the image in web
 Image(filename = '油画.png', width=width, height=height) 
 ```
-生成图片即可立即查看
+生成图片即可立即查看。
 
 ![img](/images/practice/ldm3.png)
 
 ?> 1. 选中代码分区，点击【运行】，如出现In[* ]，则表示代码运行中，静等出图结果即可；</br>
    2. 如您需要调整画布尺寸，需保证调整后长宽的均为8的整数倍。
 
-?> 如您想快速尝试，还可直接使用demo/路径下的SD_Demos.ipynb，内置英文版、中文版模型，如下图所示：
+**如您想快速尝试，还可直接使用demo/路径下的SD_Demos.ipynb，内置英文版、中文版模型，如下图所示：**
 ![img](/images/practice/SD_Demos.png)
 
  
