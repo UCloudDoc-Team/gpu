@@ -37,7 +37,6 @@ Image(filename = 'Van_Gogh_Style_Shanghai.png', width=width, height=height)
 ```
 
 生成图片即可立即查看
-
 ![img](/images/practice/ldm2.png)
 
 
