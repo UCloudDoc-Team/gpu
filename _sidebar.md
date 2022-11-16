@@ -1,4 +1,5 @@
 
+* [动态与公告](gpu/document_detail)
 * [概览](/gpu/README)
 * [产品简介](/gpu/introduction)
 * [产品优势](/gpu/advantage)
