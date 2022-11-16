@@ -35,8 +35,8 @@ image.save("Van_Gogh_Style_Shanghai.png")
 # show the image in web
 Image(filename = 'Van_Gogh_Style_Shanghai.png', width=width, height=height)
 ```
-
 生成图片即可立即查看
+
 ![img](/images/practice/ldm2.png)
 
 
@@ -59,6 +59,7 @@ image.save("油画.png")
 Image(filename = '油画.png', width=width, height=height) 
 ```
 生成图片即可立即查看
+
 ![img](/images/practice/ldm3.png)
 
 ?> 1. 选中代码分区，点击【运行】，如出现In[* ]，则表示代码运行中，静等出图结果即可；</br>
