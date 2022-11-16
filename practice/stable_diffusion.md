@@ -83,10 +83,10 @@ cd stable-diffusion
 python scripts/txt2img.py --prompt "a painting of Mads Mikkelsen smoking"
 ```
 #### 2.2.3 使用jupyter页面查看
-根据外网ip地址，访问http://EIP:8888
-![img](/images/practice/jupyter1.png)
+根据外网ip地址，访问jupyter：http://EIP:8888
 
 输入token（在/root/.jupyter/jupyter_notebook_config.py中查看c.NotebookApp.token的配置，可自行修改。）
+
 ![img](/images/practice/jupyter2.png) </br>
 ![img](/images/practice/jupyter3.png)
 
