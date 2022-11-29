@@ -97,7 +97,7 @@ python scripts/txt2img.py --prompt "A valley full of flowers , by Van Gogh, oil 
 ![img](/images/practice/jupyter3.png)
 
 根据导航点击预览图片
-![img](/images/practice/jupyter5.png)
+![img](/images/practice/jupyter6.png)
 
 
 
