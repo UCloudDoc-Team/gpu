@@ -83,10 +83,10 @@ Image(filename = '油画.png', width=width, height=height)
 conda activate ldm
 ```
 #### 2.2.2 执行sample脚本
-执行脚本，输入您预想图画的描述，即可得到图片（以下以“a painting of Mads Mikkelsen smoking”为例），生成的图片在 /root/stable-diffusion/outputs/txt2img-samples/目录下。
+执行脚本，输入您预想图画的描述，即可得到图片（以下以“A valley full of flowers , by Van Gogh, oil painting trending on artstation HQ”为例），生成的图片在 /root/stable-diffusion/outputs/txt2img-samples/目录下。
 ```
 cd stable-diffusion
-python scripts/txt2img.py --prompt "a painting of Mads Mikkelsen smoking"
+python scripts/txt2img.py --prompt "A valley full of flowers , by Van Gogh, oil painting trending on artstation HQ"
 ```
 #### 2.2.3 使用jupyter页面查看
 根据外网ip地址，访问jupyter：http://EIP:8888
