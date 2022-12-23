@@ -3,7 +3,9 @@
 
 * [产品简介](/gpu/introduction)
 * [产品优势](/gpu/advantage)
-* [机型与性能](/gpu/type)
+* 机型与性能
+    * [GPU云主机机型](/gpu/type)
+    * [抢占式GPU云主机](/gpu/Spotinstance_gpu)
 * [深度学习指南](/gpu/practice)
 * [驱动安装指南](/gpu/operation/index)
     * [CentOS7环境配置](/gpu/operation/centos7_cuda)
