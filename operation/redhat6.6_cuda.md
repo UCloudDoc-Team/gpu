@@ -7,8 +7,8 @@
   3D controller: NVIDIA Corporation Device 1df6 (rev a1) 表示识别为V100S
 ```
 
-?> 运行"yum install pciutils"提示"This system is not registered with an entitlement server. You can use subscription-manager to register."</br>
-    请运行以下命令启动redhat账号登录：</br>
+运行"yum install pciutils"提示"This system is not registered with an entitlement server. You can use subscription-manager to register."</br>
+请运行以下命令启动redhat账号登录：</br>
     ```
     $ subscription-manager register
     
@@ -22,13 +22,13 @@
     
     The registered system name is: 10-13-47-75
     ```
-    按照提示输入 Red Hat 帐户的用户名和密码。</br>
-    确认系统已成功注册，并启用订阅:</br>
+按照提示输入 Red Hat 帐户的用户名和密码。</br>
+确认系统已成功注册，并启用订阅:</br>
     ```
     subscription-manager list --consumed
     ```
     
-    运行以下命令以更新系统：</br>
+    运行以下命令以更新系统：
     ```
     yum update
     ```
