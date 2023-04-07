@@ -13,7 +13,7 @@
     * [Ubuntu16.04环境配置](/gpu/operation/ubuntu16_cuda)
     * [Ubuntu18.04环境配置](/gpu/operation/ubuntu18_cuda)
     * [Windows 环境配置](/gpu/operation/Windows_cuda)
-    * [rocky linux8 环境配置](/gpu/operation/Rocky Linux 8_cuda)
+    * [rocky linux8环境配置](/gpu/operation/Rocky Linux 8_CUDA)
     * [Redhat 6.6环境配置](/gpu/operation/redhat 6.6_cuda)
 * [AI绘画stable diffusion实践](/gpu/practice/stable_diffusion)
 
