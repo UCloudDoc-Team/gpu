@@ -11,27 +11,23 @@
 请运行以下命令启动redhat账号登录：</br>
     ```
     $ subscription-manager register
-    
     Registering to: subscription.rhsm.redhat.com:443/subscription
-    
     Username: *****
-    
     Password: 
-    
     The system has been registered with ID: ******************************
-    
     The registered system name is: 10-13-47-75
     ```
+    
 按照提示输入 Red Hat 帐户的用户名和密码。</br>
-确认系统已成功注册，并启用订阅:</br>
+确认系统已成功注册，并启用订阅:
     ```
     subscription-manager list --consumed
     ```
-    
-    运行以下命令以更新系统：
+    运行以下命令以更新系统：</br>
     ```
     yum update
     ```
+    
  ## 2.下载GPU驱动
  ```
  wget https://cn.download.nvidia.com/tesla/460.106.00/NVIDIA-Linux-x86_64-460.106.00.run
@@ -55,14 +51,14 @@ wmi                     6287  2 nouveau,mxm_wmi
  
  ```
  # tail -1 /etc/modprobe.d/blacklist.conf 
- blacklist nouveau
+   blacklist nouveau
  ```
  ## 4.安装驱动
  ```
  # sudo sh <driver_installer>.run --kernel-source-path=/usr/src/kernels/<kernel_version>
  ```
  其中 <driver_installer> 是驱动程序的安装程序文件名，<kernel_version> 是当前系统检查搭到的内核版本号。
- 检查当前正在运行的内核版本，可以通过一下命令来查看：
+ 检查当前正在运行的内核版本，可以通过以下命令来查看：
  ```
  uname -r
  ```
