@@ -1,4 +1,4 @@
-# Rocky Linux 8.5环境配置
+# Rocky Linux 8环境配置
 
 ## 1.检查GPU设备识别
 ```
