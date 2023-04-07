@@ -11,18 +11,14 @@
 请运行以下命令启动redhat账号登录：</br>
     ```
     $ subscription-manager register
-    Registering to: subscription.rhsm.redhat.com:443/subscription
-    Username: *****
-    Password: 
-    The system has been registered with ID: ******************************
-    The registered system name is: 10-13-47-75
     ```
     
 按照提示输入 Red Hat 帐户的用户名和密码。</br>
-确认系统已成功注册，并启用订阅:
+确认系统已成功注册，并启用订阅:</br>
     ```
     subscription-manager list --consumed
     ```
+    </br>
     运行以下命令以更新系统：</br>
     ```
     yum update
