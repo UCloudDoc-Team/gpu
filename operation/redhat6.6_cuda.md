@@ -2,8 +2,8 @@
 
 ## 1.检查GPU设备识别
 ```
-  $ yum install pciutils
-  $ sudo lspci | grep NVIDIA
+  # yum install pciutils
+  # sudo lspci | grep NVIDIA
   3D controller: NVIDIA Corporation Device 1df6 (rev a1) 表示识别为V100S
 ```
 
@@ -53,7 +53,7 @@ wmi                     6287  2 nouveau,mxm_wmi
  ```
  # sudo sh <driver_installer>.run --kernel-source-path=/usr/src/kernels/<kernel_version>
  ```
- 其中 <driver_installer> 是驱动程序的安装程序文件名，<kernel_version> 是当前系统检查搭到的内核版本号。
+ 其中<driver_installer>是驱动程序的安装程序文件名，<kernel_version>是当前系统检查搭到的内核版本号。
  检查当前正在运行的内核版本，可以通过以下命令来查看：
  ```
  uname -r
