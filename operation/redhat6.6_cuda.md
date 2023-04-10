@@ -28,7 +28,7 @@
  ```
  wget https://cn.download.nvidia.com/tesla/460.106.00/NVIDIA-Linux-x86_64-460.106.00.run
  ```
- ?> 驱动版本可根据业务需求从nvidia官方链接下载，https://www.nvidia.cn/Download/index.aspx?lang=cn。
+驱动版本可根据业务需求从nvidia官方链接下载，https://www.nvidia.cn/Download/index.aspx?lang=cn。
  
  ## 3.禁用nouveau
  因部分linux系统安装的nouveau驱动与nvidia驱动有冲突，因此需先禁用。输入"lsmod  |grep nouveau",如果有返回，则需禁用，禁用方式如下：
