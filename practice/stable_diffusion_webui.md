@@ -17,9 +17,9 @@ export GRADIO_SERVER_NAME=0.0.0.0
 export GRADIO_SERVER_PORT=7860
 python ./launch.py --xformers 
 ```
- ![img](/images/practice/SDwebui01.png)
+ ![img](/images/practice/SDwebui_01.png)
 
 ## 3.登录Web UI页面进行绘图
 登录hhtp://eip:7860即可访问stable diffusion Web UI页面。
 
-![img](/images/practice/SDwebui02.png)
+![img](/images/practice/SDwebui_02.png)
