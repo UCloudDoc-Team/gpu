@@ -10,7 +10,7 @@
 运行"yum install pciutils"提示"This system is not registered with an entitlement server. You can use subscription-manager to register."</br>
 请运行以下命令启动Redhat账号登录：</br>
     ```
-    $ subscription-manager register
+     subscription-manager register
     ```
     
 按照提示输入 Redhat 帐户的用户名和密码。</br>
