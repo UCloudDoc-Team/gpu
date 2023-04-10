@@ -2,8 +2,8 @@
 
 ## 1.检查GPU设备识别
 ```
-  $ yum install pciutils
-  $ sudo lspci | grep NVIDIA
+  # yum install pciutils
+  # sudo lspci | grep NVIDIA
   3D controller: NVIDIA Corporation GV100GL [Tesla V100S PCIe 32GB] (rev a1) 表示识别为V100S
 ```
 
