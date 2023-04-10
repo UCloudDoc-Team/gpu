@@ -7,28 +7,19 @@
   3D controller: NVIDIA Corporation GV100GL [Tesla V100S PCIe 32GB] (rev a1) 表示识别为V100S
 ```
 
-## 2.获取并安装Epel
-```
-sudo dnf install epel-release
-```
-
-## 3.将 Nvidia驱动程序添加到软件包管理器列表中
+## 2.将 Nvidia驱动程序添加到软件包管理器列表中
 ```
 sudo dnf config-manager --add-repo https://developer.download.nvidia.com/compute/cuda/repos/rhel8/x86_64/cuda-rhel8.repo
 ```
-## 4.安装kernel和headers
-```
-sudo dnf install kernel-devel-$(uname -r) kernel-headers-$(uname -r)
-```
-## 5.安装NVIDIA驱动和配置
+## 3.安装NVIDIA驱动和配置
 ```
 sudo dnf install nvidia-driver nvidia-settings
 ```
-## 6.安装CUDA
+## 4.安装CUDA
 ```
 sudo dnf install cuda-driver
 ```
-## 7.重启系统并验证
+## 5.重启系统并验证
 重启操作系统之后，通过"nvidia-smi"命令来查看显卡是否正常工作。
 ```
 [root@10-13-47-75 ~]# nvidia-smi
