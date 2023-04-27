@@ -2,7 +2,7 @@
 
 ## 1.创建一台GPU云主机
 创建流程参考[创建第一台云主机](https://docs.ucloud.cn/uhost/newuser/briefguide)</br>
-创建GPU云主机时，镜像选择“AI绘画stable diffusion平台”，操作路径：镜像市场——>AI绘图 Web UI，便捷安装AI绘画Web UI页面，镜像内置环境：CentOS 7.8。</br> 
+创建GPU云主机时，镜像选择“AI绘画Web UI”，操作路径：镜像市场——>AI绘图 Web UI，便捷安装AI绘画Web UI页面，镜像内置环境：CentOS 7.8。</br> 
 推荐机型及配置：</br>
 GPU型云主机 T4/T4S 最低配置：8核32G一颗GPU </br>
 GPU型云主机 V100S  最低配置：10核32G一颗GPU</br>
