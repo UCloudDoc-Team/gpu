@@ -1,4 +1,4 @@
-# ChatGLM-6B模型
+# ChatGLM-6B模型快速部署
 
 ## 简介
 ChatGLM-6B是清华大学知识工程和数据挖掘小组发布的一个开源的对话机器人。根据官方介绍，这是一个千亿参数规模的中英文语言模型。并且对中文做了优化。本次开源的版本是其60亿参数的小规模版本，约60亿参数。该模型的基础模型是GLM（ GLM: General Language Model Pretraining with Autoregressive Blank Infilling ），是一个千亿基座模型。
