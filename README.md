@@ -18,6 +18,8 @@
 *  AI绘画
     * [AI绘画Web UI实践](/gpu/practice/stable_diffusion_webui)
     * [AI绘画jupyter实践](/gpu/practice/stable_diffusion)
+*  AI最佳实践
+    * [ChatGLM-6B模型](/gpu/practice/ChatGLM)
 
     
 
