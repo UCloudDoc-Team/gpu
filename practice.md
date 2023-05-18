@@ -1,14 +1,6 @@
 # 深度学习指南
 
-
-
-## 1.文档快速链接
-
-1) [AI在线服务 UAI-Service](uai-inference/README)
-
-2) [AI训练 UAI-Train](uai-train/README)
-
-## 2. 机器学习进阶笔记系列
+##  机器学习进阶笔记系列
 
 1)	机器学习进阶笔记之一 |[TensorFlow安装与入门]( https://zhuanlan.zhihu.com/p/22410917)
 
