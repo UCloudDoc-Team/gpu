@@ -6,11 +6,11 @@ Tesla K80计算卡拥有4992个CUDA核心，显存12G，可提供1.87 TFlops的�
 
 Telsa P40计算卡拥有3840个CUDA核心，显存24G，可提供12 TFlops的单精度性能和47 TOPS的INT8性能;
 
-Telsa V100计算卡拥有5120个CUDA核心，显存16G，可提供14TFlops的单精度性能和28 TOPS的FP16性能;
+Telsa V100计算卡拥有5120个CUDA核心，显存16G，可提供14TFlops的单精度性能和28 TFlops的FP16性能;
 
-Telsa T4计算卡拥有2560个CUDA核心，显存16G，可提供8.1TFlops的单精度性能和65.13的TFlops性能;
+Telsa T4计算卡拥有2560个CUDA核心，显存16G，可提供8.1TFlops的单精度性能和65.13 TFlops的FP16性能;
 
-Telsa V100S是G3中V100的升级款，拥有32G显存。
+Telsa V100S计算卡拥有5120个CUDA核心，显存32G,可提供16TFlops的单精度性能和32 TFlops的FP16性能；
 
 UCloud GPU主机在科学计算表现中比传统架构性能提高数十倍。同时其搭配SSD固态磁盘，IO性能亦在普通磁盘的数十倍以上。
 
