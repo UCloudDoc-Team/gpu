@@ -18,9 +18,10 @@
 *  AI绘画
     * [AI绘画Web UI实践](/gpu/practice/stable_diffusion_webui)
     * [AI绘画jupyter实践](/gpu/practice/stable_diffusion)
-*  AI最佳实践
+*  AI大模型最佳实践
     * [ChatGLM-6B模型快速部署](/gpu/practice/ChatGLM)
     * [Alpaca-LoRA模型快速部署](/gpu/practice/Alpaca-LoRA)
+    * [T5 模型快速部署](/gpu/practice/T5) 
     * [BBT-2模型快速部署](/gpu/practice/BBT-2)
 
     
