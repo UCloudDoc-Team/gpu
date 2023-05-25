@@ -22,7 +22,7 @@
     * [ChatGLM-6B模型快速部署](/gpu/practice/ChatGLM)
     * [Alpaca-LoRA模型快速部署](/gpu/practice/Alpaca-LoRA)
     * [T5 模型快速部署](/gpu/practice/T5) 
-    * [BBT-2模型快速部署](/gpu/practice/BBT-2)
+    * [MiniGPT-4模型快速部署](/gpu/practice/MiniGPT4)
 
     
 
