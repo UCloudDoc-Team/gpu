@@ -21,6 +21,6 @@ python ./launch.py --xformers
  ![img](/images/practice/SDwebui_01.png)
 
 ## 3.登录Web UI页面进行绘图
-登录hhtp://eip:7860即可访问stable diffusion Web UI页面。
+登录http://eip:7860即可访问stable diffusion Web UI页面。
 
 ![img](/images/practice/SDwebui_02.png)
