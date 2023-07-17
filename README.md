@@ -23,6 +23,7 @@
     * [Alpaca-LoRA模型快速部署](/gpu/practice/Alpaca-LoRA)
     * [T5 模型快速部署](/gpu/practice/T5) 
     * [MiniGPT-4模型快速部署](/gpu/practice/MiniGPT4)
+    * [Ziya模型快速部署](/gpu/practice/Ziya)
 
     
 
