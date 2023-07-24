@@ -20,7 +20,8 @@
     * [AI绘画jupyter实践](/gpu/practice/stable_diffusion)
 *  AI大模型最佳实践
     * [ChatGLM-6B模型快速部署](/gpu/practice/ChatGLM) 
-    * [Alpaca-LoRA模型快速部署](/gpu/practice/Alpaca-LoRA) 
+    * [Alpaca-LoRA模型快速部署](/gpu/practice/Alpaca-LoRA)
+    * [Llama2模型快速部署](/gpu/practice/Llama2)
     * [T5 模型快速部署](/gpu/practice/T5) 
     * [MiniGPT-4 模型快速部署](/gpu/practice/MiniGPT4)
     * [Ziya模型快速部署](/gpu/practice/Ziya)
