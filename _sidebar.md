@@ -21,7 +21,7 @@
 *  AI大模型最佳实践
     * [ChatGLM-6B模型快速部署](/gpu/practice/ChatGLM) 
     * [Alpaca-LoRA模型快速部署](/gpu/practice/Alpaca-LoRA)
-    * [Llama2模型快速部署](/gpu/practice/Llama2)
+    * [Llama2模型快速部署](/gpu/practice/LLaAM2)
     * [T5 模型快速部署](/gpu/practice/T5) 
     * [MiniGPT-4 模型快速部署](/gpu/practice/MiniGPT4)
     * [Ziya模型快速部署](/gpu/practice/Ziya)
