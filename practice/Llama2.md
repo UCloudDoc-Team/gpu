@@ -8,6 +8,6 @@ Llama2模型是经过了更广泛和深入的训练，具有更多的标记数�
 最低推荐配置：10核CPU 64G内存 1颗V100S。</br>
 镜像选择“镜像市场”，镜像名称搜索“Llama2”,选择该镜像创建GPU云主机即可。</br>
 GPU云主机创建成功之后，登录GPU云主机。</br>
-![image](/images/practice/Llama01.png)</br>
+![image](/images/practice/Llama01.jpg)</br>
 登录页面如下所示：</br>
-![image](/images/practice/Llama02.png)</br>
+![image](/images/practice/Llama02.jpg)</br>
