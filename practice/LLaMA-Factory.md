@@ -59,7 +59,7 @@ Save steps 是每多少step存一次模型断点，方便在训练意外断掉�
 
 建议调高至1000以上，否则硬盘容量会很容易不足。每次训练完后，可以到/home/ubuntu/LLaMA-Factory/saves/ChineseLLaMA2-13B-Chat/lora/... 下进行删除。
 ![image](/images/practice/llama-factory11.png)</br>
-可以通过Preview command 得到可以在命令行运行的等效命令，Output dir 是训练结果以及断点的存放路径。设置好参数后可以直接点start进行训练。（也可以复制命令在/home/ubuntu/LLaMA-Factory 下，conda的llama_factory环境下运行。）
+可以通过Preview command 得到可以在命令行运行的等效命令，Output dir 是训练结果以及断点的存放路径。设置好参数后可以直接点start进行训练。也可以复制命令在/home/ubuntu/LLaMA-Factory 下，conda的llama_factory环境下运行。
 
 
 
