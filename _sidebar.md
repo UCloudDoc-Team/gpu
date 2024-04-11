@@ -25,3 +25,4 @@
     * [T5 模型快速部署](/gpu/practice/T5) 
     * [MiniGPT-4 模型快速部署](/gpu/practice/MiniGPT4)
     * [Ziya模型快速部署](/gpu/practice/Ziya)
+    * [LLaMA-Factory快速部署](/gpu/practice/LLaMA-Factory)
