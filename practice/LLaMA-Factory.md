@@ -16,12 +16,12 @@ GPU云主机创建成功之后，登录GPU云主机。</br>
 
 ## 操作实践
 通过浏览器访问：http://ip:7860 即可，注意ip需要替换为云主机的外网ip，如果无法访问请在控制台检查安全规则是否放行上述端口
-1.加载装置
+### 1.加载装置
 ![image](/images/practice/llama-factory03.png)</br>
   注：1、2 的模型必须一一对应，2的path为虚机本地模型下载的path。
-2.操作
+### 2.操作
 ![image](/images/practice/llama-factory04.png)</br>
-3.训练参数
+### 3.训练参数
 ![image](/images/practice/llama-factory05.png)</br>
 
 使用web ui训练后可以点refresh adapters刷新本地Lora权重，从adapter path指定训练好的Lora权重。
