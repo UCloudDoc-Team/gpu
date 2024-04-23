@@ -26,3 +26,4 @@
     * [MiniGPT-4 模型快速部署](/gpu/practice/MiniGPT4)
     * [Ziya模型快速部署](/gpu/practice/Ziya)
     * [LLaMA-Factory快速部署](/gpu/practice/LLaMA-Factory)
+    * [LLaMA3-8B-Instruct-Chinese快速部署](/gpu/practice/Llama3-8B-Instruct-Chinese)
