@@ -8,7 +8,8 @@ Llama3 由 Meta 是在15万亿tokens数据集上训练的，是 Llama2的7倍，
 最低推荐配置：16核CPU 32G内存 1颗高性价比显卡6 GPU。</br>
 镜像选择“镜像市场”，镜像名称搜索“Llama3”,选择该镜像创建GPU云主机即可。</br>
 GPU云主机创建成功之后，登录GPU云主机。</br>
-![image](/images/practice/Llama301.jpg)</br>
+![image](/images/practice/Llama301.png)</br>
 登录页面如下所示：</br>
-![image](/images/practice/Llama302.jpg)</br>
-![image](/images/practice/Llama303.jpg)</br>
+![image](/images/practice/Llama302.PNG)</br>
+web操作页面如下所示：</br>
+![image](/images/practice/Llama303.PNG)</br>
