@@ -4,7 +4,7 @@ NVIDIA 集合通信库(NCCL) 可实现针对NVIDIA GPU 和网络进行性能优�
 
 ## GPU云主机内NCCL测试步骤
 > 确认环境：需在8卡高性价比显卡6/高性价比显卡6pro/A800云主机下   
-> 确认依赖：vn驱动，cuda，gcc依赖：版本>=8，nccl依赖包，topo文件
+> 确认依赖：vn驱动，cuda，gcc依赖：版本>=8，NCCL依赖包，topo文件
 
 1. 下载NCCL-Test
 ```sh
