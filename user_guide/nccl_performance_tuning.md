@@ -17,7 +17,6 @@ make CUDA_HOME=/usr/local/cuda -j
 ```
 
 2. 指定拓扑文件
-
 ```sh
 # 执行命令，导出topo文件
 NCCL_TOPO_DUMP_FILE=path/file ./all_reduce_perf -b 8 -e 128M -f 2 -g 1 -t 8
@@ -30,14 +29,12 @@ NCCL_TOPO_DUMP_FILE=path/file ./all_reduce_perf -b 8 -e 128M -f 2 -g 1 -t 8
 1. 确认GPU云主机内是否存在该文件/var/run/nvidia-topologyd/virtualTopology.xml
   - 若存在执行第2步   
   - 若不存在请咨询技术支持，将提供您该文件，拷贝文件保存至GPU node的 /var/run/nvidia-topologyd/virtualTopology.xml后执行第2步   
-2.  在GPU云主机内执行下列操作
-     
+2.  在GPU云主机内执行下列操作 
 ```sh
 docker run -it -e NVIDIA_VISIBLE_DEVICES=all -v /var/run/nvidia-topologyd/virtualTopology.xml:/var/run/nvidia-topologyd/virtualTopology.xml  ubuntu /bin/bash
 ```
 
 ## NCCL性能优化配置
-
 ```sh
 NCCL_MIN_NCHANNELS=32   //nccl可以使用的最小通道数
 NCCL_MAX_NCHANNELS=32   //nccl可以使用的最大通道数，增加通道数也会增加nccl使用的cuda块数，这可能有助于提高性能，2.5以上nccl版本最大值为32
