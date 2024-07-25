@@ -7,7 +7,7 @@ NVIDIA 集合通信库(NCCL) 可实现针对NVIDIA GPU 和网络进行性能优�
 > 确认依赖：nvidia驱动，cuda，gcc依赖：版本>=8，NCCL依赖包，topo文件
 
 ### 依赖不满足
-> 若依赖满足，直接跳至[本文NCCL-Test部分]("NCCL-Test")   
+> 若依赖满足，直接跳至本文NCCL-Test部分  
 
 这部分为基础环境搭建指导，以Ubuntu系统为例
 #### 基础环境搭建
