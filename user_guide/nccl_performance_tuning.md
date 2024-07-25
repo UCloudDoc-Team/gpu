@@ -67,13 +67,13 @@ wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-keyring_1.0-1_all.deb
 # ubuntu 22.04
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.0-1_all.deb
-  
 sudo dpkg -i cuda-keyring_1.0-1_all.deb
 sudo apt update
 # 下面软件包要和cuda版本匹配（具体版本可查询官方信息（举例ubuntu22.4）：https://developer.download.nvidia.cn/compute/cuda/repos/ubuntu2204/x86_64/）
 sudo apt install libnccl2=2.18.3-1+cuda12.2
 sudo apt install libnccl-dev=2.18.3-1+cuda12.2
 ```
+
 ### NCCL-Test
 #### 1. 下载NCCL-Test
 ```sh
