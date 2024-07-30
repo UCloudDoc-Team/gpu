@@ -12,15 +12,17 @@ NVIDIA 集合通信库(NCCL) 可实现针对NVIDIA GPU 和网络进行性能优�
 这部分为基础环境搭建指导，以Ubuntu系统为例
 #### 基础环境搭建
 ```sh
-## make sudo apt update
+## make
+sudo apt update
 sudo apt-get install make
  
-## g++ 、gcc sudo apt update
+## g++ 、gcc
+sudo apt update
 sudo apt install build-essential
+
 ## g++
 sudo apt update
 sudo apt install g++
- 
  
 ## gcc
 sudo apt update
