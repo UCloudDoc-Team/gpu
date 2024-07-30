@@ -97,22 +97,19 @@ make MPI=1 MPI_HOME=/usr/mpi/gcc/openmpi-4.1.5a1 CUDA_HOME=/usr/local/cuda -j
 cd nccl-tests/build
 NCCL_MIN_NCHANNELS=32 NCCL_MAX_NCHANNELS=32 NCCL_NTHREADS=256 NCCL_BUFFSIZE=2097152 NCCL_P2P_DISABLE=1 ./all_reduce_perf -b 8 -e 8G -f 2 -g 8
  
-## 注意：下面命令中有三处需要注意手动更改
-## 1. A800 NCCL_TOPO_FILE 对应path换成topo xml 文件的path
-## 2. PATH 需要换成nccl-test对应的路径
-## 3. numa -H 后面地址需要换成内网ip地址
-mpirun --allow-run-as-root --oversubscribe -np 8 --bind-to numa -H {内网IP地址} -mca plm_rsh_args "-p 22 -q -o StrictHostKeyChecking=no" -mca coll_hcoll_enable 0 -mca pml ob1 -mca btl ^openib -mca btl_openib_if_include mlx5_0:1,mlx5_1:1,mlx5_2:1,mlx5_3:1 -mca btl_openib_cpc_include rdmacm -mca btl_openib_rroce_enable 1 -x NCCL_IB_DISABLE=0 -x NCCL_SOCKET_IFNAME=eth0 -x NCCL_IB_GID_INDEX=3 -x NCCL_IB_TC=184 -x NCCL_IB_TIMEOUT=23 -x NCCL_IB_RETRY_CNT=7 -x NCCL_IB_PCI_RELAXED_ORDERING=1 -x NCCL_IB_HCA=mlx5_0,mlx5_1,mlx5_2,mlx5_3 -x CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 -x NCCL_TOPO_FILE={topo xml文件地址} -x NCCL_TOPO_DUMP_FILE=$HOME/export-topo.xml -x NCCL_NET_GDR_LEVEL=1 -x CUDA_DEVICE_ORDER=PCI_BUS_ID -x NCCL_ALGO=Ring -x LD_LIBRARY_PATH -x PATH {对应nccl-test目录path} -b 8 -e 8G -f 2 -g 1
-# 上述是单机测试命令，多机测试只需要 -H 后面添加测试的虚机eth0对应的IP即可（多IP之间英文逗号相隔）
-# np后面的参数：测试几台虚机则是 （需要测试虚机个数*8）
- 
-# -H 后面参数：虚机eth0对应的ip地址，多个之间英文都好隔开（ip addr 可查看，必须包含程序运行的虚机eth0的ip）
- 
-# -x NCCL_TOPO_FILE=指定v2.xml所在的绝对路径
- 
-# -x PATH 后面参数： 绝对路径下nccl-test下all_reduce_perf的路径
- 
-# -x NCCL_ALGO=Ring
+# A800；注意：下面命令中有三处需要注意手动更改
+# 1.  NCCL_TOPO_FILE 对应path换成topo xml 文件的path
+# 2. PATH 需要换成nccl-test对应的路径
+# 3. numa -H 后面地址需要换成内网ip地址
 
+mpirun --allow-run-as-root --oversubscribe -np 8 --bind-to numa -H {内网IP地址} -mca plm_rsh_args "-p 22 -q -o StrictHostKeyChecking=no" -mca coll_hcoll_enable 0 -mca pml ob1 -mca btl ^openib -mca btl_openib_if_include mlx5_0:1,mlx5_1:1,mlx5_2:1,mlx5_3:1 -mca btl_openib_cpc_include rdmacm -mca btl_openib_rroce_enable 1 -x NCCL_IB_DISABLE=0 -x NCCL_SOCKET_IFNAME=eth0 -x NCCL_IB_GID_INDEX=3 -x NCCL_IB_TC=184 -x NCCL_IB_TIMEOUT=23 -x NCCL_IB_RETRY_CNT=7 -x NCCL_IB_PCI_RELAXED_ORDERING=1 -x NCCL_IB_HCA=mlx5_0,mlx5_1,mlx5_2,mlx5_3 -x CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 -x NCCL_TOPO_FILE={topo xml文件地址} -x NCCL_TOPO_DUMP_FILE=$HOME/export-topo.xml -x NCCL_NET_GDR_LEVEL=1 -x CUDA_DEVICE_ORDER=PCI_BUS_ID -x NCCL_ALGO=Ring -x LD_LIBRARY_PATH -x PATH {对应nccl-test目录path} -b 8 -e 8G -f 2 -g 1
+
+# 上述是单机测试命令，多机测试只需要 -H 后面添加测试的虚机eth0对应的IP即可（多IP之间英文逗号相隔）
+# np后面的参数：测试几台虚机则是 （需要测试虚机个数*8） 
+# -H 后面参数：虚机eth0对应的ip地址，多个之间英文都好隔开（ip addr 可查看，必须包含程序运行的虚机eth0的ip）
+# -x NCCL_TOPO_FILE=指定v2.xml所在的绝对路径
+# -x PATH 后面参数： 绝对路径下nccl-test下all_reduce_perf的路径
+# -x NCCL_ALGO=Ring
 ```
 
 ## GPU云主机NCCL TOPO文件透传至容器
