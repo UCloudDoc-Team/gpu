@@ -40,8 +40,8 @@ sudo apt install gcc
    - 执行命令下载驱动(wget后面是复制的链接地址)：`wget {上一步复制的链接地址}`
    - 检查gcc、make软件库是否安装，及安装gcc 和 make
    ```sh
-   # which make 检测make是否安装, 安装命令 # sudo apt-get install make
-   # gcc --version  检测gcc是否安装, 安装命令 # sudo apt-get install gcc
+   ## which make 检测make是否安装, 安装命令 # sudo apt-get install make
+   ## gcc --version  检测gcc是否安装, 安装命令 # sudo apt-get install gcc
    ```  
 5. 开始安装：执行`sh NVIDIA-xxxxxxx.run `，即开始安装驱动，注：遇到权限问题命令前添加sudo即可
 6. 验证nvidia驱动：执行 `nvidia-smi`
@@ -52,14 +52,14 @@ sudo apt install gcc
 2. wget下载到虚机本地，执行 `sudo sh cuda_xxxxxxx_linux.run` 进行安装
 3. 配置环境变量，添加软链接
    ```sh
-   # 添加环境变量：
+   ## 添加环境变量：
    sudo vim /etc/profile  //编辑文件，在末尾添加,保存退出:
    export CUDA_HOME=/usr/local/cuda
    export PATH=$PATH:/usr/local/cuda/bin
    export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
-   # 添加软链接：
+   ## 添加软链接：
    sudo ln -s /usr/local/cuda-{cuda版本号} /usr/local/cuda （修改版本号即可，eg：cuda-10.1）
-   # 重启
+   ## 重启
    sudo reboot
    ```
 4. 验证cuda环境是否配置完成：`nvcc -V`
@@ -67,16 +67,12 @@ sudo apt install gcc
 ```sh
 ## ubuntu 18.04    
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-keyring_1.0-1_all.deb   
-
 ## ubuntu 20.04   
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-keyring_1.0-1_all.deb   
-
 ## ubuntu 22.04   
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.0-1_all.deb   
-   
-sudo dpkg -i cuda-keyring_1.0-1_all.deb   
-sudo apt update   
-   
+sudo dpkg -i cuda-keyring_1.0-1_all.deb
+sudo apt update
 ## 下面软件包要和cuda版本匹配（具体版本可查询官方信息（举例ubuntu22.4）：https://developer.download.nvidia.cn/compute/cuda/repos/ubuntu2204/x86_64/）   
 sudo apt install libnccl2=2.18.3-1+cuda12.2
 sudo apt install libnccl-dev=2.18.3-1+cuda12.2
@@ -85,7 +81,7 @@ sudo apt install libnccl-dev=2.18.3-1+cuda12.2
 ### NCCL-Test
 #### 1. 下载NCCL-Test
 ```sh
-# 下载并编译nccl-test
+## 下载并编译nccl-test
 git clone https://github.com/NVIDIA/nccl-tests.git
 cd nccl-tests
 ## 高性价比显卡6/6增强型
@@ -97,14 +93,14 @@ make MPI=1 MPI_HOME=/usr/mpi/gcc/openmpi-4.1.5a1 CUDA_HOME=/usr/local/cuda -j
 
 #### 2. 指定拓扑文件
 ```sh
-# 高性价比显卡6/6增强型
+## 高性价比显卡6/6增强型
 cd nccl-tests/build
 NCCL_MIN_NCHANNELS=32 NCCL_MAX_NCHANNELS=32 NCCL_NTHREADS=256 NCCL_BUFFSIZE=2097152 NCCL_P2P_DISABLE=1 ./all_reduce_perf -b 8 -e 8G -f 2 -g 8
  
-# A800；注意：下面命令中有三处需要注意手动更改
-# 1.  NCCL_TOPO_FILE 对应path换成topo xml 文件的path
-# 2. PATH 需要换成nccl-test对应的路径
-# 3. numa -H 后面地址需要换成内网ip地址
+## A800；注意：下面命令中有三处需要注意手动更改
+## 1.  NCCL_TOPO_FILE 对应path换成topo xml 文件的path
+## 2. PATH 需要换成nccl-test对应的路径
+## 3. numa -H 后面地址需要换成内网ip地址
 
 mpirun --allow-run-as-root --oversubscribe -np 8 --bind-to numa -H {内网IP地址} -mca plm_rsh_args "-p 22 -q -o StrictHostKeyChecking=no" -mca coll_hcoll_enable 0 -mca pml ob1 -mca btl ^openib -mca btl_openib_if_include mlx5_0:1,mlx5_1:1,mlx5_2:1,mlx5_3:1 -mca btl_openib_cpc_include rdmacm -mca btl_openib_rroce_enable 1 -x NCCL_IB_DISABLE=0 -x NCCL_SOCKET_IFNAME=eth0 -x NCCL_IB_GID_INDEX=3 -x NCCL_IB_TC=184 -x NCCL_IB_TIMEOUT=23 -x NCCL_IB_RETRY_CNT=7 -x NCCL_IB_PCI_RELAXED_ORDERING=1 -x NCCL_IB_HCA=mlx5_0,mlx5_1,mlx5_2,mlx5_3 -x CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 -x NCCL_TOPO_FILE={topo xml文件地址} -x NCCL_TOPO_DUMP_FILE=$HOME/export-topo.xml -x NCCL_NET_GDR_LEVEL=1 -x CUDA_DEVICE_ORDER=PCI_BUS_ID -x NCCL_ALGO=Ring -x LD_LIBRARY_PATH -x PATH {对应nccl-test目录path} -b 8 -e 8G -f 2 -g 1
 
