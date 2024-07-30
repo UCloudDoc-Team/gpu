@@ -44,10 +44,10 @@ sudo apt install gcc
    # gcc --version  检测gcc是否安装, 安装命令 # sudo apt-get install gcc
    ```  
 5. 开始安装：执行`sh NVIDIA-xxxxxxx.run `，即开始安装驱动，注：遇到权限问题命令前添加sudo即可
-6. 验证nvidia驱动：执行 `vidia-smi`
+6. 验证nvidia驱动：执行 `nvidia-smi`
 
 ##### CUDA
-1. [官网下载CUDA](https://developer.nvidia.com/cuda-downloads)   
+1. [官网下载CUDA](https://developer.nvidia.com/cuda-toolkit-archive)   
    选择对应系统和CUDA版本（执行 `nvidia-smi` 可查看驱动适配的最高cuda版本，小于等于Nvidia驱动的cuda版本）
 2. wget下载到虚机本地，执行 `sudo sh cuda_xxxxxxx_linux.run` 进行安装
 3. 配置环境变量，添加软链接
@@ -58,7 +58,7 @@ sudo apt install gcc
    export PATH=$PATH:/usr/local/cuda/bin
    export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
    # 添加软链接：
-   sudo ln -s /usr/local/cuda-10.1 /usr/local/cuda （修改版本号即可，eg：10.1）
+   sudo ln -s /usr/local/cuda-{cuda版本号} /usr/local/cuda （修改版本号即可，eg：cuda-10.1）
    # 重启
    reboot
    ```
