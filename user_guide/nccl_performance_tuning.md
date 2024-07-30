@@ -44,7 +44,7 @@ sudo apt install gcc
    # gcc --version  检测gcc是否安装, 安装命令 # sudo apt-get install gcc
    ```  
 5. 开始安装：执行`sh NVIDIA-xxxxxxx.run `，即开始安装驱动，注：遇到权限问题命令前添加sudo即可
-6. 验证nvidia驱动：执行 ‘vidia-smi’
+6. 验证nvidia驱动：执行 `vidia-smi`
 
 ##### CUDA
 1. [官网下载CUDA](https://developer.nvidia.com/cuda-downloads)   
