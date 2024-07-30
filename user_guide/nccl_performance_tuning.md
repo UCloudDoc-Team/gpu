@@ -12,17 +12,19 @@ NVIDIA 集合通信库(NCCL) 可实现针对NVIDIA GPU 和网络进行性能优�
 这部分为基础环境搭建指导，以Ubuntu系统为例
 #### 基础环境搭建
 ```sh
-#  gcc 、g++， make 环境；gcc依赖：版本>=8
-/etc/yum.repos.d/CentOS-7-all.repo增加配置：
-[sclo]
-baseurl=http://yum.service.ucloud.cn/custom/7/sclo/$basearch/
-enabled=1
+## make sudo apt update
+sudo apt-get install make
  
-apt-get clean all
-apt-get makecache
+## g++ 、gcc sudo apt update
+sudo apt install build-essential
+## g++
+sudo apt update
+sudo apt install g++
  
-apt-get install devtoolset-8-gcc.x86_64 devtoolset-8-gcc-c++.x86_64 devtoolset-8-gcc-gdb-plugin.x86_64 devtoolset-8-gcc-gfortran.x86_64 devtoolset-8-gcc-plugin-devel.x86_64 --skip-broken
-scl enable devtoolset-8 bash  # 重启云主机 需要重新加载环境
+ 
+## gcc
+sudo apt update
+sudo apt install gcc
 ```
 
 #### NVIDIA驱动和CUDA安装
@@ -80,15 +82,22 @@ sudo apt install libnccl-dev=2.18.3-1+cuda12.2
 # 下载并编译nccl-test
 git clone https://github.com/NVIDIA/nccl-tests.git
 cd nccl-tests
+## 高性价比显卡6/6增强型
 make CUDA_HOME=/usr/local/cuda -j
-#   执行命令
-~/nccl-tests/build$ ./all_reduce_perf -b 8 -e 128M -f 2 -g 8
+ 
+## A800
+make MPI=1 MPI_HOME=/usr/mpi/gcc/openmpi-4.1.5a1 CUDA_HOME=/usr/local/cuda -j
 ```
 
 #### 2. 指定拓扑文件
 ```sh
-# 执行命令，导出topo文件
-NCCL_TOPO_DUMP_FILE=path/file ./all_reduce_perf -b 8 -e 128M -f 2 -g 1 -t 8
+# 高性价比显卡6/6增强型
+cd nccl-tests/build
+NCCL_MIN_NCHANNELS=32 NCCL_MAX_NCHANNELS=32 NCCL_NTHREADS=256 NCCL_BUFFSIZE=2097152 NCCL_P2P_DISABLE=1 ./all_reduce_perf -b 8 -e 8G -f 2 -g 8
+ 
+ 
+## A800 NCCL_TOPO_FILE 对应path换成topo xml 文件的path 、 PATH 需要换成nccl-test对应的路径、numa -H 后面地址需要换成内网ip地址
+mpirun --allow-run-as-root --oversubscribe -np 8 --bind-to numa -H {内网IP地址} -mca plm_rsh_args "-p 22 -q -o StrictHostKeyChecking=no" -mca coll_hcoll_enable 0 -mca pml ob1 -mca btl ^openib -mca btl_openib_if_include mlx5_0:1,mlx5_1:1,mlx5_2:1,mlx5_3:1 -mca btl_openib_cpc_include rdmacm -mca btl_openib_rroce_enable 1 -x NCCL_IB_DISABLE=0 -x NCCL_SOCKET_IFNAME=eth0 -x NCCL_IB_GID_INDEX=3 -x NCCL_IB_TC=184 -x NCCL_IB_TIMEOUT=23 -x NCCL_IB_RETRY_CNT=7 -x NCCL_IB_PCI_RELAXED_ORDERING=1 -x NCCL_IB_HCA=mlx5_0,mlx5_1,mlx5_2,mlx5_3 -x CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 -x NCCL_TOPO_FILE=/home/ubuntu/xxx.xml -x NCCL_TOPO_DUMP_FILE=$HOME/export-topo.xml -x NCCL_NET_GDR_LEVEL=1 -x CUDA_DEVICE_ORDER=PCI_BUS_ID -x NCCL_ALGO=Ring -x LD_LIBRARY_PATH -x PATH /home/ubuntu/nccl-tests/build/all_reduce_perf -b 8 -e 8G -f 2 -g 1
 ```
 
 ## GPU云主机NCCL TOPO文件透传至容器
