@@ -102,7 +102,6 @@ mpirun --allow-run-as-root --oversubscribe -np 8 --bind-to numa -H {内网IP地�
 # -H 后面参数：虚机eth0对应的ip地址，多个之间英文都好隔开（ip addr 可查看，必须包含程序运行的虚机eth0的ip）
 # -x NCCL_TOPO_FILE=指定nccl_topo.xml所在的绝对路径
 # -x PATH 后面参数： 绝对路径下nccl-test下all_reduce_perf的路径
-# -x NCCL_ALGO=Ring
 ```
 
 ## GPU云主机NCCL TOPO文件透传至容器
