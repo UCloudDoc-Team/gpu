@@ -28,7 +28,10 @@ sudo apt install gcc
 2. [访问NVIDIA官网获取下载地址](https://www.nvidia.com/download/index.aspx?lang=cn)
    - 产品家族选择具体机型
    - CUDA ToolKit选择驱动支持的CUDA版本，没有选择则是默认版本
-3. 选择完成后，点击搜索→下载，复制链接地址
+3. 选择完成后，点击搜索→下载，复制链接地址（下图以A100为例：）
+     ![image](/images/downloadnv1.png)</br>
+     ![image](/images/downloadnv2.png)</br>
+     ![image](/images/downloadnv3.png)</br>
 4. 进入GPU云主机
    - 执行命令下载驱动(wget后面是复制的链接地址)：`wget {上一步复制的链接地址}`
    - 检查gcc、make软件库是否安装，及安装gcc 和 make
