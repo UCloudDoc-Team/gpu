@@ -55,8 +55,9 @@ sudo systemctl enable nvidia-fabricmanager
 ```
 ![企业微信截图_24d31c96-b61c-4bfb-9cfe-2631e9d2fb6e](https://github.com/user-attachments/assets/63012661-f8c6-4998-8fc3-62e1f310eb61)
 
-### 3. 虚拟网卡配置完成，需要在云主机内部初始化网络配置，每次开机都需执行，建议加入开机自启动
+### 3. 虚拟网卡初始化
 ```
+虚拟网卡配置完成，需要在云主机内部初始化网络配置，每次开机都需执行，建议加入开机自启动
 # ubuntu
 mtu=4200
 devs="eth1 eth2 eth3 eth4"
