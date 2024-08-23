@@ -8,6 +8,7 @@
   * [抢占式GPU云主机](/gpu/Spotinstance_gpu)
 * GPU使用指南
     * [NCCL性能调优](/gpu/user_guide/nccl_performance_tuning)
+    * [A800](/gpu/user_guide/A800)
     * [常见问题](/gpu/user_guide/faq)
 * [深度学习指南](/gpu/practice)
 * [驱动安装指南](/gpu/operation/index)
