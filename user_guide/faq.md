@@ -14,4 +14,5 @@
    ```bash
    nvidia-smi
    ```
-   
+   ![image](/images/nvidia-smi.png)</br>
+
