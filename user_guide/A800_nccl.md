@@ -32,12 +32,12 @@ sudo systemctl enable nvidia-fabricmanager
 ```
 在私有网络VPC界面创建新的VPC，网段为192.168.0.0/16，初始子网subnet-eth1网段为192.168.1.0/24
 ```
-![企业微信截图_ac1d1e1d-5988-410f-be10-939624a7b351](https://github.com/user-attachments/assets/b86ebc98-a450-479b-86a1-0d64517ef98f)
+![image](/images/a800nccl1.png)</br>
 ```
 然后切换到子网tab栏，选中刚才创建的VPC，
 新增子网subnet-eth2，网段为192.168.2.0/24
 ```
-![企业微信截图_3c0d070d-31c1-4b45-8fdc-d12fd7b8f0df](https://github.com/user-attachments/assets/33ec970b-c1e4-4a5f-8243-10519dcf5137)
+![image](/images/a800nccl2.png)</br>
 ```
 新增子网subnet-eth3，网段为192.168.3.0/24
 新增子网subnet-eth4，网段为192.168.4.0/24
@@ -53,7 +53,8 @@ sudo systemctl enable nvidia-fabricmanager
 虚拟网卡创建完成后，按照相同的顺序将虚拟网卡挂载到每台云主机上
 例如挂载到每台云主机的第一张网卡都是从子网subnet-eth1申请的虚拟网卡
 ```
-![企业微信截图_24d31c96-b61c-4bfb-9cfe-2631e9d2fb6e](https://github.com/user-attachments/assets/63012661-f8c6-4998-8fc3-62e1f310eb61)
+![image](/images/a800nccl3.png)</br>
+
 
 ### 3. 虚拟网卡初始化
 ```
