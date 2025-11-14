@@ -2,17 +2,6 @@
 
 
 
-## K80（售罄）
-
-GPU可选：1-2颗 Tesla K80。
-
-CPU可选：4核/8核/16核
-
-内存可选：8G/16G/32G/64G
-
-数据盘可选：100-1000G SSD本地盘 
-
-
 ## P40
 
 GPU可选：1-4颗 Tesla P40。
@@ -81,13 +70,13 @@ CPU可选：16核-124核
 
 ## 性能参数
 
-| 参数 | Tesla K80  | Tesla P40 | Telsa V100 | Tesla T4/T4S | Tesla V100S  | Tesla A100 |
-| -------------- | ---------- | --------- | ---------- | ---------- | ------------ | ------------ |
-| CUDA核心数 | 2496 | 3840 | 5120 | 2560 | 5120 | 6912 |
-| 单精度浮点性能 | 8.7 TFLOPS | 12 TFLOPS | 14 TFOPS | 8.1 TFLOPS | 16.35 TFLOPS | 19.49 TFLOPS |
-| INT8性能  | N/A | 47 TOPS  | N/A | 130 TOPS | N/A | N/A |
-| Tensor性能 | N/A | N/A  | 112 TFLOPS | N/A | 130 TFLOPS | 312 TFLOPS |
-| 显存容量 | 12GB | 24GB | 16GB | 16GB | 32GB | 80GB |
-| 功耗 | 300W | 250W | 250W | 70W | 300W | 300W |
-| 架构 | Kepler | Pascal | Volta | Turing | Volta | Ampere |
+| 参数 | Tesla P40 | Telsa V100 | Tesla T4/T4S | Tesla V100S  | Tesla A100 |
+| -------------- | --------- | ---------- | ---------- | ------------ | ------------ |
+| CUDA核心数 | 3840 | 5120 | 2560 | 5120 | 6912 |
+| 单精度浮点性能 | 12 TFLOPS | 14 TFOPS | 8.1 TFLOPS | 16.35 TFLOPS | 19.49 TFLOPS |
+| INT8性能  | 47 TOPS  | N/A | 130 TOPS | N/A | N/A |
+| Tensor性能 | N/A  | 112 TFLOPS | N/A | 130 TFLOPS | 312 TFLOPS |
+| 显存容量 | 24GB | 16GB | 16GB | 32GB | 80GB |
+| 功耗 | 250W | 250W | 70W | 300W | 300W |
+| 架构 | Pascal | Volta | Turing | Volta | Ampere |
 
