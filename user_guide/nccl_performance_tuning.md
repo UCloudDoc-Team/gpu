@@ -88,6 +88,14 @@ make MPI=1 MPI_HOME=/usr/mpi/gcc/openmpi-4.1.5a1 CUDA_HOME=/usr/local/cuda -j
 ```
 
 #### 2. 指定拓扑文件
+可现在云主机内部执行下列命令：
+
+```sh
+ubuntu:~$ lspci | grep "QEMU PCIe Expander bridge"                 ##输入命令
+00:02.0 Host bridge: Red Hat, Inc. QEMU PCIe Expander bridge。     ##匹配输出结果
+```
+如输出结果与上述一致，可忽略下面步骤
+
 ```sh
 ## 高性价比显卡6/6增强型
 cd nccl-tests/build
