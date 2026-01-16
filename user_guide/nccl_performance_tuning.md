@@ -86,5 +86,6 @@ NCCL_NTHREADS=512 NCCL_MIN_NCHANNELS=8 NCCL_MAX_NCHANNELS=8 NCCL_BUFFSIZE=524288
 | -f 2                 | 消息大小按 2 倍递增                         |
 | -g 8                 | 使用 8 张 GPU 参与 AllReduce 通信           |
 
-> 存量部分GPU云主机底层虚拟化架构尚未更新，可以通过控制台手动关机再开机自动完成升级。
+> UCloud已对GPU云主机底层虚拟化进行升级，可通过lspci命令确认是否存在QEMU PCIe Expander bridge确认
+> 部分存量运行的云主机，可以在控制台上关机/开机一次, 将自动为您完胜升级
 > 若不进行升级，测试时需要指定NCCL_TOPO_FILE为/var/run/nvidia-topologyd/virtualTopology.xml (运行docker时也请透传此文件)
