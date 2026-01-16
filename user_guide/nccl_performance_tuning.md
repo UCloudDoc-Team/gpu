@@ -61,7 +61,7 @@ nvcc -V
 # 1. 下载/编译/安装nccl
 git clone https://github.com/NVIDIA/nccl.git
 cd nccl
-git checkout v2.21.5-1
+git checkout v2.26.5-1
 make pkg.debian.build CUDA_HOME=/usr/local/cuda -j$(nproc)
 cd build/pkg/deb/
 sudo apt install ./*.deb
